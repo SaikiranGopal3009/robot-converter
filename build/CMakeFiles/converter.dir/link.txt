@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch x86_64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/converter.dir/src/main.cpp.o CMakeFiles/converter.dir/src/parser/step_parser.cpp.o CMakeFiles/converter.dir/src/exporter/urdf_exporter.cpp.o -o converter
