@@ -6,22 +6,22 @@ This simple tool converts CAD-based STEP files into URDF for ROS 2, Isaac Sim, a
 Modular architecture: Allows easy expansion to SDF (Gazebo), USD (Omniverse), OBJ meshes, and beyond.
 
 ## Project Structure & Workflow
-robot-converter/
+```
 ├── CMakeLists.txt
 ├── src/
-│ ├── core/
-│ │ └── robot_link.h
-│ ├── parser/
-│ │ ├── step_parser.h
-│ │ └── step_parser.cpp
-│ ├── exporter/
-│ │ ├── urdf_exporter.h
-│ │ └── urdf_exporter.cpp
-│ └── main.cpp
+│   ├── core/robot_link.h
+│   ├── parser/
+│   │   ├── step_parser.h
+│   │   └── step_parser.cpp
+│   ├── exporter/
+│   │   ├── urdf_exporter.h
+│   │   └── urdf_exporter.cpp
+│   └── main.cpp
 ├── test_data/
-│ └── industrial_arm.step
-├── build/ # Generated
+│   └── industrial_arm.step
 └── README.md
+```
+
 
 
 
