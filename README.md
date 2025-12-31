@@ -29,7 +29,7 @@ STEP ──[parser]──> RobotLinks ──[exporter]──> URDF
 ## Usage ##
 
 **1. Clone & Build**
-git clone https://github.com/YOURNAME/robot-converter.git
+git clone https://github.com/SaikiranGopal3009/robot-converter.git
 cd robot-converter
 mkdir build && cd build
 cmake ..
