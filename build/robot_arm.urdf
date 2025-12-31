@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<robot name="industrial_arm">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/base_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="shoulder_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/shoulder_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="shoulder_link"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="upper_arm_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/upper_arm_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_2" type="revolute">
+    <parent link="shoulder_link"/>
+    <child link="upper_arm_link"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="elbow_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/elbow_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_3" type="revolute">
+    <parent link="upper_arm_link"/>
+    <child link="elbow_link"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="forearm_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/forearm_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_4" type="revolute">
+    <parent link="elbow_link"/>
+    <child link="forearm_link"/>
+    <origin xyz="0 0 0.4" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="wrist_roll_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/wrist_roll_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_5" type="revolute">
+    <parent link="forearm_link"/>
+    <child link="wrist_roll_link"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="wrist_pitch_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/wrist_pitch_link.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_6" type="revolute">
+    <parent link="wrist_roll_link"/>
+    <child link="wrist_pitch_link"/>
+    <origin xyz="0 0 0.6" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="tool_flange">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/tool_flange.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_7" type="revolute">
+    <parent link="wrist_pitch_link"/>
+    <child link="tool_flange"/>
+    <origin xyz="0 0 0.7" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="gripper_fingers">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_meshes/gripper_fingers.step" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_8" type="revolute">
+    <parent link="tool_flange"/>
+    <child link="gripper_fingers"/>
+    <origin xyz="0 0 0.8" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+</robot>

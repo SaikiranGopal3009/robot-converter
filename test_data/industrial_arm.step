@@ -1,0 +1,18 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Industrial 6-DOF Robot Arm','Manufacturing'),'2;1');
+FILE_NAME('industrial_arm.step','2025-12-30T',(''),(''),'CAD Assistant','');
+FILE_SCHEMA(('AP214CD'));
+ENDSEC;
+DATA;
+#10=PRODUCT_DEFINITION_SHAPE('base_link','Robot base pedestal');
+#20=PRODUCT_DEFINITION_SHAPE('shoulder_link','J1 shoulder joint');
+#30=PRODUCT_DEFINITION_SHAPE('upper_arm_link','J2 upper arm 300mm');
+#40=PRODUCT_DEFINITION_SHAPE('elbow_link','J3 elbow joint');
+#50=PRODUCT_DEFINITION_SHAPE('forearm_link','J4 forearm 250mm');
+#60=PRODUCT_DEFINITION_SHAPE('wrist_roll_link','J5 wrist roll');
+#70=PRODUCT_DEFINITION_SHAPE('wrist_pitch_link','J6 wrist pitch');
+#80=PRODUCT_DEFINITION_SHAPE('tool_flange','End effector mount M8');
+#90=PRODUCT_DEFINITION_SHAPE('gripper_fingers','Parallel gripper 50mm stroke');
+ENDSEC;
+END-ISO-10303-21;
